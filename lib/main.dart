@@ -9,15 +9,20 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Tile('A', HitType.hit),
+        appBar: AppBar(
+          title: Align(
+            alignment: Alignment.centerLeft,
+            child: Text('Birdle'),
+          ),
         ),
+        body: Center(child: Text('Hello World!')),
       ),
     );
   }
 }
+
 class Tile extends StatelessWidget {
   const Tile(this.letter, this.hitType, {super.key});
 
